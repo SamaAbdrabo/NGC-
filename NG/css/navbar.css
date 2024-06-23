@@ -1,0 +1,134 @@
+
+.navbar{
+ width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  background-color: ;
+  transition: background 1s;
+  position:fixed;
+  background-color: transparent;
+      transition: background-color 0.3s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.header {
+  height: 80px;
+}
+.navbar:hover {
+  background-color: #;
+}
+
+.logo-img {
+    width: 150px;
+    height: 100px;
+}
+
+.pages ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+
+}
+
+.pages a:hover{
+  color: #71707D;
+}
+
+.pages a {
+  color:#394974;;
+  font-size: 22px;
+  font-family: 'Cormorant Infant', serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 10;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(14, 23, 39, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(14, 23, 39, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+
+.overlay a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 36px;
+  font-family: 'Cormorant Infant', serif;
+  color:#eeddbd;
+  display: block;
+ transition: 0.3s;
+ div.dropdown {
+   display:inline-block;
+   float:right;
+}
+
+
+.overlay a:hover, .overlay a:focus {
+  color: #71707D;
+
+  }
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 860px) {
+  div.pages {
+    display: none;
+  }
+
+
+.openbtn div{
+height: 4px;
+background-color: #394974;
+margin: 5px 0;
+border-radius: 25px;
+transition: 0.3s;
+}
+
+.openbtn{
+  width: 30px;
+  display: block;
+  margin: 1em 0 0 1em;
+}
+
+.one{
+  width: 30px;
+}
+
+.two{
+  width: 20px
+}
+
+.three{
+width: 25px;
+}
+
+.openbtn:hover div{
+  width: 30px;
+  color:#0d0d0d;
+}
