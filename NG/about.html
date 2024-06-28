@@ -52,3 +52,30 @@
 
           </nav>
       </section>
+    </body>
+    <script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    const navbarHeight = navbar.offsetHeight;
+
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (scrollTop>navbarHeight){
+        if (scrollTop > lastScrollTop) {
+          // Scrolling down
+          navbar.classList.add('hide');
+          navbar.style.backgroundColor = '#333';
+        } else {
+          // Scrolling up
+          navbar.classList.remove('hide');
+        }
+      }
+
+      if (scrollTop === 0) {
+          navbar.style.backgroundColor = 'transparent';
+        }
+
+      lastScrollTop = scrollTop;
+    });
+
+  </script>
