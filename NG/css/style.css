@@ -1,16 +1,19 @@
 
 <!--to be edited-->
 
+
 body {
   padding-top:60px;
   overflow-x: hidden;
+  background-color: #d3d3d3;
 }
+
 body {
   width: 100%;
   height: 100%;
   text-align: center;
   display:flex;
-  margin;:0;
+  margin:0;
   flex-direction: column;
  justify-content: space-between;
 
@@ -19,15 +22,19 @@ body {
   display: flex;
   flex-direction:column;
   text-align:center;
-  margin-top:5em;
+  position: relative;
 }
-
+.image-container {
+  position: relative;
+  height:100vh;
+  overflow:hidden;
+}
   .first-img{
-    overflow: scroll;
-    height: 100%;
+    margin-top:20em ;
+    height: 100vh;
     width: 100vw;
     display: flex;
-    position:absolute;
+    position:relative;
     margin-top: 0;
     object-fit: cover;
     max-width: 100%;
@@ -39,7 +46,15 @@ body {
 
   .text-container{
     height:auto;
-  }
+    position: absolute; /* Position it inside the image-container */
+    top:15em;
+    width: 100%;
+    height: 100%;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 2em;
+}
+
   .overlay-text {
     display:flex;
     flex-direction: column;
@@ -47,7 +62,7 @@ body {
     align-self: flex-end;
     color:#152338;
     padding: 20px;
-    width: 45%;
+    width: 40%;
     left: 3em;
   }
 
@@ -71,14 +86,25 @@ body {
     width:auto;
   }
 
-
-  .container2{
-    width: 100vw;
+  .secondsec{
     display: flex;
-    position:absolute;
-    max-width: 100%;
-    max-height: 100%;
+    flex-direction:column;
+    text-align:center;
+    position: relative;
+    width:100%;
   }
+  .container2{
+    margin-top:0;
+    background-image: url(file:///C:/Users/user/Desktop/NGC/photos/landscape.jpg);
+    background-position: center;
+    background-size:cover;:
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    height:70em;
+    max-width: 100%;
+    }
+
   .text-container2{
     width:100vw;
     display: flex;
@@ -91,6 +117,7 @@ body {
     background-color:#394974;
     display:flex;
     align-self: flex-end;
+    margin-bottom: -2em;
   }
   .overlay-text2{
     margin:10em;
@@ -111,36 +138,58 @@ body {
     margin-right: 10em;
   }
 
-  /* CSS for third section */
-  .thirdsec {
-    background-color: #d3d3d3;
-    color: black;
-    padding: 100px 0; /* Adjust padding as needed */
+  .projects-container {
+    background-color: gray;
+    margin: 0 12em; /* Adjust margins to center the container */
+    padding: 3em 5em; /* Adjust padding for better spacing */
+    z-index: 1000;
+    border-color: black;
+    height: auto; /* Allow height to adjust based on content */
+    margin-top: -4em;
+    position: relative;
   }
 
-  .container3 {
+  .projects-gallery {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Ensure container fills the section height */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 1em; /* Add space between items */
   }
 
-  .overlay-text3 {
-    max-width: 800px;
-    text-align: center;
-    margin: 0 auto; /* Center align text container */
+  .projectpic {
+    image-resolution: snap 1000px;
+    height: auto; /* Allow image to maintain aspect ratio */
+    width: 100%; /* Allow width to adjust based on container */
+    max-height: 20em; /* Limit height to prevent stretching */
+    object-fit: cover; /* Ensure image covers the area */
   }
 
-  .overlay-text3 h1 {
-    font-size: 2.25em;
-    margin-bottom: 0.625em;
+  .projects-text {
+    font-size: 1.25em;
+    width: 50%;
+    margin: 1em;
+    text-align: left;
   }
 
-  .overlay-text3 p {
-    line-height: 1.6;
-    margin: 20px 0;
+  .projects-text a {
+    text-decoration: none;
+    color: black;
   }
 
+  .projects-text a:hover {
+    color: #394974;
+  }
+
+  .swipe {
+    font-size: 2em;
+    position: absolute;
+    right: 2em;
+    bottom: .1em;
+    color:pink;
+    padding: 0.5em;
+  }
   .abtbtn {
     background-color: transparent;
     color: black;
@@ -151,7 +200,7 @@ body {
     border: 2px solid black;
     text-decoration: none;
   }
-
+/* on phones and smaller screens */
   @media screen and (max-width: 1000px) {
     .overlay-text {
       width: 60%;
@@ -182,6 +231,9 @@ body {
       font size: 0.45em;
       margin: 0;
     }
+    .projects-container{
+      padding: 3em 5em;
+    }
   }
 
 
@@ -190,15 +242,18 @@ body {
     .firstsec{
       display: inline-block;
       text-align: center;
+      height:100%;
     }
     .first-img{
-      position:fixed;
-      min-height:1em;
+      position: absolute;
+      height:100%;
+      min-height: 100vh;
+      overflow: ;
     }
     .text-container {
-        position: static;
+        position: absolute;
         transform: none;
-        padding-top: 80px; /* Ensure text is below navbar */
+        z-index: 100;
       }
 
     .overlay-text {
@@ -234,4 +289,26 @@ body {
        font size: 0.45em;
        width:90vw;
      }
+     .market-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        gap: 1em; /* Smaller gap */
+    }
+
+    .market-item {
+        width: 100%;
+        padding: 1em;
+
+    .market-item h3 {
+        font-size: 1.2em;
+    }
+
+    .market-item p {
+        font-size: 0.8em;
+    }
+    .ninth {
+    grid-column: span 2;
+  }
+  .projects-container{
+    padding: 3em 1.5em;
+  }
 }
